@@ -1,0 +1,66 @@
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+        transform-origin: left;
+    }
+
+    100% {
+        width: 60px;
+        transform-origin: right;
+    }
+}
+
+.intro h2 {
+    position: relative;
+    /* Needed for positioning the ::after pseudo-element */
+}
+
+.intro h2::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    /* Adjust as needed to position the underline */
+    left: 109px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    animation: underlineAnimation 3s ease-in-out 1s forwards;
+    /* Adjust animation duration and timing as needed */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 13% 13%;
+    /* Added more margin to the top and sides */
+    padding: 0;
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.intro {
+    text-align: left;
+    margin-bottom: 2em;
+    opacity: 0;
+    /* Start with opacity 0 */
+    transform: translateY(10px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    /* Increased the transition duration */
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 4s ease, transform 4s ease;
+    /* Increased the transition duration */
+}

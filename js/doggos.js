@@ -2,11 +2,11 @@ let breeds = [];
 let breed = 'affenpinscher';
 
 const BREEDS_LIST = 'https://dog.ceo/api/breeds/list/all';
-const BREEDS_URL = `https://dog.ceo/api/breed/${breed}/images/random`;
 const spinner = document.querySelector('.spinner');
 
 function showDoggo() {
     spinner.classList.add("show");
+    let BREEDS_URL = `https://dog.ceo/api/breed/${breed}/images/random`;
     fetch(BREEDS_URL)
         .then(function(response) {
             return response.json();
@@ -46,6 +46,7 @@ function init() {
         const selectElement = document.querySelector('.dogImage');
         selectElement.innerHTML = '';
         const selectedBreed = event.target.value;
+        console.log(selectedBreed);
         breed = selectedBreed;
         showDoggo();
     });

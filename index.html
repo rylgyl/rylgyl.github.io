@@ -1,68 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuj Goyal</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="css/index.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 13% 13%;
-            /* Added more margin to the top and sides */
-            padding: 0;
-            background-color: royalblue;
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 450px;
-            margin: 0 auto;
-        }
-
-        .intro {
-            text-align: left;
-            margin-bottom: 2em;
-        }
-
-        .small-logo {
-            display: inline-block;
-            max-width: 30px;
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="cs/styles.css">
+    <title>Doggo Viewer</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="intro fade-in">
-            <h2>Hi! 👋 I'm Anuj!</h2>
+    <div class="header">
+        <h1>Doggo Viewer</h1>
+        <select class="breedOptions">
 
-            <!-- What your current side project is -->
-            <p>I'm a budding entrepreneur searching for my passion project.</p> 
-
-            <!-- What your current interests are -->
-            <p>In my free time, I'm discovering new hip-hop 🎶, reading 📚, keeping up on the latest 
-                <img class="small-logo" src="img/f1.png" alt="F1 Logo"> 
-                gossip, gaming 🎮, and bootstrapping my way through coding courses 👨‍💻.</p>
-
-            <!-- What your current job and contact info is -->
-            <p>I'm currently at <img class="small-logo" src="img/plk.png" alt="Popeyes Logo"> working on
-                tech products to improve operational efficiency. Feel free to reach out at 
-                <a href="https://twitter.com/rylgyl" target="_blank">
-                    <img class="small-logo" src="img/twitter.png" alt="Twitter Logo"></a> or 
-                    <a href="https://bsky.app/profile/rylgyl.com" target="_blank>">
-                    <img class="small-logo" src="img/bluesky.png" alt="Bluesky Logo"></a></p>
-        </div>
+        </select>
     </div>
-    <script src="js/index.js"></script>
-</body>
 
+    <div class="dogImage">
+    
+    </div>
+    <div class="spinner">
+        🐶
+    </div>
+    
+    <script src="js/doggos.js"></script>
+</body>
 </html>

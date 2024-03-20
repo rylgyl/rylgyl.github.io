@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-color: darkblue;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: cornflowerblue;
+    border: 1px solid blue;
+    padding: 10px 10px;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+}
+
+.dogImage{
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    text-align: center;
+} 
+
+@keyframes spin {
+    to {
+        transform: rotateZ(360deg)
+    }
+}
+
+.spinner {
+    font-size: 50px;
+    text-align: center;
+    animation: 2s spin linear infinite;
+    display: none;
+}
+
+.show {
+    display: block;
+}

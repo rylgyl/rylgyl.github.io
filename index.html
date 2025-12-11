@@ -1,75 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuj Goyal</title>
+    <title>Anuj Goyal - Tech Innovator</title>
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/index.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 13% 13%;
-            /* Added more margin to the top and sides */
-            padding: 0;
-            background-color: royalblue;
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 450px;
-            margin: 0 auto;
-        }
-
-        .intro {
-            text-align: left;
-            margin-bottom: 2em;
-        }
-
-        .small-logo {
-            display: inline-block;
-            max-width: 30px;
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-    </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="intro fade-in">
-            <h2>Hi! 👋 I'm Anuj!</h2>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
 
-            <!-- What your current side project is -->
-            <p>I'm in the discovery phase of my big thing</p> 
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </button>
 
-            <!-- What your current interests are -->
-            <p>In my free time I'm discovering new music 🎶 reading 📚 working out 💪🏼 and building 👨‍💻</p>
-
-            <!-- What your current job and contact info is -->
-            <p>I'm currently at <a href="https://rbi.com" target="_blank"><img class="small-logo" src="img/rbi.svg" alt="RBI Logo"></a> leading the AI Enablement team</p> 
-            
-            <p>Feel free to reach out at 
-                    <a href="https://x.com/rylgyl" target="_blank">
-                    <img class="small-logo" src="img/x.png" alt="X Logo"></a>
-                    or
-                    <a href="https://linkedin.com/in/anujgoyal96" target="_blank">
-                    <img class="small-logo" src="img/linkedin.png" alt="LinkedIn Logo"></a>
-            </p>
-            
-            <p>Check out my app 
-                    <a href="https://apps.apple.com/us/app/gym-quest/id6743580397" target="_blank">
-                    <img class="small-logo" src="img/GymQuest.png" alt="Gym Quest Logo"></a>
-                    Gym Quest - Your digital lifting log
-            </p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                    <span class="terminal-title">anuj@portfolio:~</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">$</span> <span id="typedText"></span><span class="cursor">|</span></p>
+                </div>
+            </div>
+            <h1 class="glitch" data-text="ANUJ GOYAL">ANUJ GOYAL</h1>
+            <p class="subtitle">AI Enablement Lead | Builder | Innovator</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card" data-tilt>
+                    <div class="card-icon">💼</div>
+                    <h3>Current Role</h3>
+                    <p>Leading the AI Enablement team at <a href="https://rbi.com" target="_blank" class="inline-link">Restaurant Brands International</a></p>
+                </div>
+                <div class="about-card" data-tilt>
+                    <div class="card-icon">🚀</div>
+                    <h3>Current Focus</h3>
+                    <p>In the discovery phase of my big thing - stay tuned!</p>
+                </div>
+                <div class="about-card" data-tilt>
+                    <div class="card-icon">🎯</div>
+                    <h3>Interests</h3>
+                    <p>Discovering new music 🎶 reading 📚 working out 💪🏼 and building 👨‍💻</p>
+                </div>
+            </div>
+
+            <!-- Interactive Skills Tags -->
+            <div class="skills-section">
+                <h3>Technologies I Love</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">AI/ML</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Cloud</span>
+                    <span class="skill-tag">iOS Dev</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Innovation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Project</h2>
+            <div class="projects-grid">
+                <!-- 3D Flip Card -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <img src="img/GymQuest.png" alt="Gym Quest" class="project-logo">
+                            </div>
+                            <h3>Gym Quest</h3>
+                            <p class="project-tagline">Your Digital Lifting Log</p>
+                            <span class="flip-hint">Click to learn more</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Gym Quest</h3>
+                            <p>A beautifully designed iOS app to track your fitness journey and strength training progress.</p>
+                            <div class="tech-stack">
+                                <span>iOS</span>
+                                <span>Swift</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <a href="https://apps.apple.com/us/app/gym-quest/id6743580397"
+                               target="_blank"
+                               class="btn btn-primary">
+                                Download on App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for more projects -->
+                <div class="project-placeholder">
+                    <div class="placeholder-content">
+                        <div class="code-symbol">{ }</div>
+                        <p>More exciting projects<br/>coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-subtitle">Feel free to reach out for collaborations or just a chat!</p>
+            <div class="social-links">
+                <a href="https://x.com/rylgyl" target="_blank" class="social-card">
+                    <div class="social-icon">
+                        <img src="img/x.png" alt="X">
+                    </div>
+                    <span>Follow on X</span>
+                </a>
+                <a href="https://linkedin.com/in/anujgoyal96" target="_blank" class="social-card">
+                    <div class="social-icon">
+                        <img src="img/linkedin.png" alt="LinkedIn">
+                    </div>
+                    <span>Connect on LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Anuj Goyal. Built with passion and code.</p>
+    </footer>
+
     <script src="js/index.js"></script>
 </body>
-
 </html>

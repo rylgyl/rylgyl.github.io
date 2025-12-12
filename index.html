@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuj Goyal - Tech Innovator</title>
+    <title>Anuj Goyal</title>
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -11,161 +11,83 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <!-- Particle Canvas Background -->
-    <canvas id="particleCanvas"></canvas>
+    <div class="container">
+        <!-- Header/Navigation -->
+        <header>
+            <nav>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
 
-    <!-- Theme Toggle -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
-    </button>
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Anuj Goyal</h1>
+            <p class="lead">AI Enablement Lead at Restaurant Brands International. Building tools and experiences that matter.</p>
+        </section>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-    </nav>
+        <!-- About -->
+        <section id="about" class="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>I'm currently leading the AI Enablement team at <a href="https://rbi.com" target="_blank" rel="noopener">RBI</a>, where I help teams leverage AI to build better products and experiences.</p>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="terminal">
-                <div class="terminal-header">
-                    <span class="terminal-btn red"></span>
-                    <span class="terminal-btn yellow"></span>
-                    <span class="terminal-btn green"></span>
-                    <span class="terminal-title">anuj@portfolio:~</span>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="prompt">$</span> <span id="typedText"></span><span class="cursor">|</span></p>
-                </div>
-            </div>
-            <h1 class="glitch" data-text="ANUJ GOYAL">ANUJ GOYAL</h1>
-            <p class="subtitle">AI Enablement Lead | Builder | Innovator</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+                <p>Right now, I'm in the discovery phase of my next big thing. When I'm not working, you'll find me discovering new music, reading, working out, or building something new.</p>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-card" data-tilt>
-                    <div class="card-icon">💼</div>
-                    <h3>Current Role</h3>
-                    <p>Leading the AI Enablement team at <a href="https://rbi.com" target="_blank" class="inline-link">Restaurant Brands International</a></p>
-                </div>
-                <div class="about-card" data-tilt>
-                    <div class="card-icon">🚀</div>
-                    <h3>Current Focus</h3>
-                    <p>In the discovery phase of my big thing - stay tuned!</p>
-                </div>
-                <div class="about-card" data-tilt>
-                    <div class="card-icon">🎯</div>
-                    <h3>Interests</h3>
-                    <p>Discovering new music 🎶 reading 📚 working out 💪🏼 and building 👨‍💻</p>
+                <div class="interests">
+                    <h3>Currently interested in</h3>
+                    <ul>
+                        <li>AI/ML applications in product development</li>
+                        <li>Mobile app development</li>
+                        <li>Team enablement and developer experience</li>
+                        <li>Building sustainable habits</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <!-- Interactive Skills Tags -->
-            <div class="skills-section">
-                <h3>Technologies I Love</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">AI/ML</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Cloud</span>
-                    <span class="skill-tag">iOS Dev</span>
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Innovation</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Work/Projects -->
+        <section id="work" class="work">
+            <h2>Work</h2>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Project</h2>
-            <div class="projects-grid">
-                <!-- 3D Flip Card -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="project-image">
-                                <img src="img/GymQuest.png" alt="Gym Quest" class="project-logo">
-                            </div>
-                            <h3>Gym Quest</h3>
-                            <p class="project-tagline">Your Digital Lifting Log</p>
-                            <span class="flip-hint">Click to learn more</span>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Gym Quest</h3>
-                            <p>A beautifully designed iOS app to track your fitness journey and strength training progress.</p>
-                            <div class="tech-stack">
-                                <span>iOS</span>
-                                <span>Swift</span>
-                                <span>UI/UX</span>
-                            </div>
-                            <a href="https://apps.apple.com/us/app/gym-quest/id6743580397"
-                               target="_blank"
-                               class="btn btn-primary">
-                                Download on App Store
-                            </a>
-                        </div>
+            <div class="project">
+                <div class="project-header">
+                    <div>
+                        <h3>Gym Quest</h3>
+                        <p class="project-meta">iOS App · 2024</p>
                     </div>
+                    <a href="https://apps.apple.com/us/app/gym-quest/id6743580397" target="_blank" rel="noopener" class="project-link">
+                        <span>View</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-
-                <!-- Placeholder for more projects -->
-                <div class="project-placeholder">
-                    <div class="placeholder-content">
-                        <div class="code-symbol">{ }</div>
-                        <p>More exciting projects<br/>coming soon...</p>
-                    </div>
-                </div>
+                <p>Your digital lifting log. A clean, focused iOS app for tracking strength training progress and building consistency in the gym.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-subtitle">Feel free to reach out for collaborations or just a chat!</p>
+            <div class="project-placeholder">
+                <p>More projects coming soon...</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <h2>Get in touch</h2>
+            <p>I'm always interested in hearing about new opportunities, collaborations, or just having a conversation.</p>
+
             <div class="social-links">
-                <a href="https://x.com/rylgyl" target="_blank" class="social-card">
-                    <div class="social-icon">
-                        <img src="img/x.png" alt="X">
-                    </div>
-                    <span>Follow on X</span>
-                </a>
-                <a href="https://linkedin.com/in/anujgoyal96" target="_blank" class="social-card">
-                    <div class="social-icon">
-                        <img src="img/linkedin.png" alt="LinkedIn">
-                    </div>
-                    <span>Connect on LinkedIn</span>
-                </a>
+                <a href="https://x.com/rylgyl" target="_blank" rel="noopener">X (Twitter)</a>
+                <a href="https://linkedin.com/in/anujgoyal96" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Anuj Goyal. Built with passion and code.</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Anuj Goyal</p>
+        </footer>
+    </div>
 
     <script src="js/index.js"></script>
 </body>

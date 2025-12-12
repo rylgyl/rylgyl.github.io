@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,66 +9,71 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/index.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 13% 13%;
-            /* Added more margin to the top and sides */
-            padding: 0;
-            background-color: royalblue;
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 450px;
-            margin: 0 auto;
-        }
-
-        .intro {
-            text-align: left;
-            margin-bottom: 2em;
-        }
-
-        .small-logo {
-            display: inline-block;
-            max-width: 30px;
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-    </style>
 </head>
-
 <body>
     <div class="container">
-        <div class="intro fade-in">
-            <h2>Hi! 👋 I'm Anuj!</h2>
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Anuj Goyal</h1>
+            <p class="lead">AI PM at Restaurant Brands International. Building tools and experiences that matter.</p>
+        </section>
 
-            <!-- What your current side project is -->
-            <p>I'm in the discovery phase of my big thing</p> 
+        <!-- About -->
+        <section id="about" class="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>I'm currently building on the AI Enablement team at <a href="https://rbi.com" target="_blank" rel="noopener">RBI</a>, where I help teams leverage AI to build better products and experiences.</p>
 
-            <!-- What your current interests are -->
-            <p>In my free time I'm discovering new music 🎶 reading 📚 working out 💪🏼 and building 👨‍💻</p>
+                <p>When I'm not working, you'll find me discovering new music, reading, working out, or tinkering.</p>
 
-            <!-- What your current job and contact info is -->
-            <p>I'm currently at <a href="https://rbi.com" target="_blank"><img class="small-logo" src="img/rbi.svg" alt="RBI Logo"></a> leading the AI Enablement team</p> 
-            
-            <p>Feel free to reach out at 
-                    <a href="https://x.com/rylgyl" target="_blank">
-                    <img class="small-logo" src="img/x.png" alt="X Logo"></a>
-                    or
-                    <a href="https://linkedin.com/in/anujgoyal96" target="_blank">
-                    <img class="small-logo" src="img/linkedin.png" alt="LinkedIn Logo"></a>
-            </p>
-            
-            <p>Check out my app 
-                    <a href="https://apps.apple.com/us/app/gym-quest/id6743580397" target="_blank">
-                    <img class="small-logo" src="img/GymQuest.png" alt="Gym Quest Logo"></a>
-                    Gym Quest - Your digital lifting log
-            </p>
-        </div>
+                <div class="interests">
+                    <h3>Currently interested in</h3>
+                    <ul>
+                        <li>Quant Finance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work/Projects -->
+        <section id="work" class="work">
+            <h2>Work</h2>
+
+            <div class="project">
+                <div class="project-header">
+                    <div>
+                        <h3>Gym Quest</h3>
+                        <p class="project-meta">iOS App · 2025</p>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/gym-quest/id6743580397" target="_blank" rel="noopener" class="project-link">
+                        <span>View</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <p>Your digital lifting log. A clean, focused iOS app for tracking strength training progress and building consistency in the gym.</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <h2>Get in touch</h2>
+            <p>I'm always interested in hearing about new opportunities, collaborations, or just having a conversation.</p>
+
+            <div class="social-links">
+                <a href="mailto:anuj@rylgyl.com">Email</a>
+                <a href="https://x.com/rylgyl" target="_blank" rel="noopener">X (Twitter)</a>
+                <a href="https://linkedin.com/in/anujgoyal96" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Anuj Goyal</p>
+        </footer>
     </div>
+
     <script src="js/index.js"></script>
 </body>
-
 </html>

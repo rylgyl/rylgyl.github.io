@@ -37,6 +37,7 @@ h1 {
 
 .hero h1 {
     position: relative;
+    display: inline-block;
 }
 
 .hero h1::after {
@@ -338,7 +339,7 @@ footer p {
         width: 0;
     }
     100% {
-        width: 220px;
+        width: 100%;
     }
 }
 

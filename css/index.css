@@ -375,3 +375,17 @@ footer p {
     background: #1a1a1a;
     color: #fff;
 }
+
+/* Visitor Counter - Hidden (white on white) */
+.visitor-counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #ffffff;
+    background: transparent;
+    font-size: 12px;
+    font-family: monospace;
+    user-select: text;
+    pointer-events: none;
+    z-index: 1000;
+}

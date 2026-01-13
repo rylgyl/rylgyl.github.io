@@ -365,6 +365,10 @@ footer p {
     display: inline-block;
     font-family: inherit;
     color: inherit;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Selection */

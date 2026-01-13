@@ -363,11 +363,8 @@ footer p {
 .hoverable-word {
     cursor: pointer;
     display: inline-block;
-    transition: color 0.15s ease;
-}
-
-.hoverable-word:hover {
-    color: #666;
+    font-family: inherit;
+    color: inherit;
 }
 
 /* Selection */

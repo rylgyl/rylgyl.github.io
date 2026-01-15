@@ -160,16 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const counterElement = document.getElementById('visitor-counter');
 
         try {
-            // Using CounterAPI.dev
-            const apiKey = 'ut_UfXMKYbFolzwQhmOFa1qEOKIu2rD9A9Djk6pDZ2o';
+            // Using CounterAPI.dev - no auth header needed, namespace is in URL
             const endpoint = 'https://api.counterapi.dev/v2/rylgyls-team-2387/first-counter-2387/up';
 
-            const response = await fetch(endpoint, {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${apiKey}`
-                }
-            });
+            const response = await fetch(endpoint);
 
             if (!response.ok) {
                 throw new Error('CounterAPI unavailable');

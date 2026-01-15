@@ -134,6 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add hover interactivity
     addHoverListeners();
 
+    // Visitor counter (silent)
+    fetch('https://api.counterapi.dev/v2/rylgyls-team-2387/first-counter-2387/up').catch(() => {});
+
     // Smooth scroll for navigation links
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -155,39 +158,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Visitor counter
-    async function updateVisitorCount() {
-        const counterElement = document.getElementById('visitor-counter');
-
-        try {
-            // Using CounterAPI.dev - no auth header needed, namespace is in URL
-            const endpoint = 'https://api.counterapi.dev/v2/rylgyls-team-2387/first-counter-2387/up';
-
-            const response = await fetch(endpoint);
-
-            if (!response.ok) {
-                throw new Error('CounterAPI unavailable');
-            }
-
-            const data = await response.json();
-
-            // Update the counter display
-            if (counterElement && data.data?.up_count !== undefined) {
-                counterElement.textContent = data.data.up_count;
-            }
-        } catch (error) {
-            // Fallback to localStorage if API fails
-            console.log('Using localStorage fallback for visitor counter');
-            let count = localStorage.getItem('visitor-count') || 0;
-            count = parseInt(count) + 1;
-            localStorage.setItem('visitor-count', count);
-
-            if (counterElement) {
-                counterElement.textContent = count;
-            }
-        }
-    }
-
-    // Initialize visitor counter
-    updateVisitorCount();
 });

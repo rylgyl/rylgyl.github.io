@@ -172,8 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             // Update the counter display
-            if (counterElement && data.count !== undefined) {
-                counterElement.textContent = data.count;
+            if (counterElement && data.value !== undefined) {
+                counterElement.textContent = data.value;
             }
         } catch (error) {
             // Fallback to localStorage if API fails
